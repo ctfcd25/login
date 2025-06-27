@@ -38,6 +38,7 @@
       border-radius: 8px;
       border: none;
       font-size: 1em;
+      box-sizing: border-box;
     }
 
     input {
@@ -50,6 +51,7 @@
       color: #000;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -83,7 +85,6 @@
       const senhaCifrada = "a2l0a2F0"; // "kitkat"
 
       if (u.toLowerCase() === "admin" && p === base64decode(senhaCifrada)) {
-        // Redireciona para inbox
         window.location.href = "inbox.html";
       } else {
         document.getElementById("mensagem").innerText =
